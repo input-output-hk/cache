@@ -36512,7 +36512,7 @@ function getTarPath() {
 // Return arguments for tar as per tarPath, compressionMethod, method type and os
 function getTarArgs(tarPath, compressionMethod, type, archivePath = '') {
     return __awaiter(this, void 0, void 0, function* () {
-        const args = [`"${tarPath.path}"`];
+        const args = [`sudo ${tarPath.path}`];
         const cacheFileName = utils.getCacheFileName(compressionMethod);
         const tarFile = 'cache.tar';
         const workingDirectory = getWorkingDirectory();
